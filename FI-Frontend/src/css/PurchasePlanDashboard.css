@@ -1,0 +1,173 @@
+.recipedashboard-dashboard {
+  display: flex;
+  gap: 20px;
+  height: 100vh;
+  margin-top: 20px;
+}
+
+.recipedashboard-column {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.recipedashboard-small-column {
+  width: 300px;
+  height: 75%;
+  overflow-y: auto;
+}
+
+.recipedashboard-large-column {
+  flex: 1;
+  height: 75%;
+  overflow-y: auto;
+}
+
+.recipedashboard-header {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.recipedashboard-recipe-card {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.recipedashboard-recipe-card-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  align-self: center;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.recipedashboard-recipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recipedashboard-selected {
+  background-color: #fff5f0;
+  /* border-color: #90c0ff; */
+
+  /* background-color: white; */
+  border: 2px solid #e74c3c;
+}
+
+.recipedashboard-recipe-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+.recipedashboard-recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.recipedashboard-recipe-title {
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.recipedashboard-recipe-id {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.recipedashboard-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.recipedashboard-ingredients-section,
+.recipedashboard-steps-section {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.recipedashboard-ingredients-section {
+  background-color: #f9f9f9;
+}
+
+.recipedashboard-steps-section {
+  background-color: #f0f8ff;
+}
+
+.recipedashboard-section-title {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid;
+}
+
+.recipedashboard-ingredients-section .recipedashboard-section-title {
+  border-color: #e74c3c;
+}
+
+.recipedashboard-steps-section .recipedashboard-section-title {
+  border-color: #3498db;
+}
+
+.recipedashboard-ingredient-list,
+.recipedashboard-step-list {
+  list-style-type: none;
+}
+
+.recipedashboard-ingredient-list li,
+.recipedashboard-step-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.recipedashboard-ingredient-list li {
+  background-color: #fff5f5;
+  border-left: 3px solid #e74c3c;
+}
+
+.recipedashboard-step-list li {
+  background-color: #f5f9ff;
+  border-left: 3px solid #3498db;
+}
+
+.recipedashboard-ingredient-list li:hover,
+.recipedashboard-step-list li:hover {
+  background-color: #fff;
+}
+
+.recipedashboard-video-container {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipedashboard-video-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 18px;
+}

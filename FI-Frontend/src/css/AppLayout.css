@@ -1,0 +1,136 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6fa;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  overflow: hidden;
+}
+
+.active {
+  background: transparent;
+  border-bottom: 3px solid #ff4d4d;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Layout container setup */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* Header content layout */
+.nav-content p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo section */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+.app-title {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  gap: 20px;
+}
+
+.navlink {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 6px 10px;
+  transition: 0.3s ease;
+}
+
+/* Fixed Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.profile-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Profile initial styled like an avatar */
+.profile_letter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff4d4d;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* ✅ Updated: Scrollable content area */
+.content {
+  flex: 1;
+  margin-top: 50px;
+  /* margin-top: 65px;
+  margin-bottom: 40px; */
+  padding: 1rem;
+}

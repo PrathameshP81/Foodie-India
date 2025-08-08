@@ -1,0 +1,104 @@
+/* Container for the home page */
+.home-container {
+  display: flex;
+  height: calc(100vh - 110px); /* 70px header + 40px footer */
+  padding: 20px 40px;
+  box-sizing: border-box;
+  gap: 30px;
+  overflow: hidden; /* prevent scroll */
+}
+
+/* Left column: image */
+.home-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+/* Right column: content aligned to top */
+.home-content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.home-tagline {
+  font-size: 25px;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.home-description {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Base button style */
+.btn {
+  padding: 8px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+/* Solid Primary Button */
+.btn-primary {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e43e3e;
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ff4d4d;
+  color: #ff4d4d;
+}
+
+.btn-outline:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.feature-list {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  font-size: 17px;
+  color: #333;
+}
+
+.feature-list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

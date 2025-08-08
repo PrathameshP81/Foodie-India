@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Razorpay Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body>
+    <h2>Buy Plan</h2>
+    <button onclick="startPayment()">Pay Now</button>
+
+    <script>
+      async function startPayment() {
+        try {
+          const amount = 299;
+          const token =
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcmluY2VAZ21haWwuY29tIiwiaWF0IjoxNzUzODY2NDY0LCJleHAiOjE3NTM5NTI4NjR9.Q2fyUfS72Wza8qvA93FZuRv1BO19dIlQqeB4vc6pNFM";
+          const res = await fetch(`http://localhost:8080/auth/${amount}`, {
+            method: "POST",
+            headers: {
+              Authorization: `${token}`,
+            },
+          });
+
+          const orderData = await res.json();
+          console.log("Order data from server", orderData);
+
+          if (!orderData.orderId) {
+            alert("Order creation failed");
+            return;
+          }
+
+          // Step 2: Call Razorpay Checkout
+          const options = {
+            key: "rzp_test_tznwaW2BNk9zii", // Replace with your Razorpay key
+            amount: orderData.amount,
+            currency: "INR",
+            name: "Foodie India",
+            description: "Plan Purchase",
+            order_id: orderData.orderId,
+            handler: async function (response) {
+              console.log("Payment response:", response);
+
+              const confirmRes = await fetch(
+                `http://localhost:8080/subscription/1`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `${token}`,
+                  },
+                  body: JSON.stringify({
+                    razorpay_payment_id: response.razorpay_payment_id,
+                    razorpay_order_id: response.razorpay_order_id,
+                  }),
+                }
+              );
+
+              const confirmData = await confirmRes.json();
+
+              if (confirmRes.ok) {
+                alert("Payment successful and confirmed!");
+                console.log(confirmData);
+              } else {
+                alert(
+                  "Payment success but confirmation failed: " +
+                    confirmData.message
+                );
+                console.error(confirmData);
+              }
+            },
+            prefill: {
+              name: "Prathamesh Patil",
+              email: "prathamesh@example.com",
+              contact: "9876543210",
+            },
+            theme: {
+              color: "#3399cc",
+            },
+          };
+
+          const rzp = new Razorpay(options);
+          rzp.open();
+        } catch (error) {
+          console.error("Payment error:", error);
+          alert("Something went wrong during the payment process");
+        }
+      }
+    </script>
+  </body>
+</html>
