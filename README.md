@@ -11,12 +11,40 @@
 - 🔒 Secure login & signup (JWT-based)
 - 👨‍🍳 Admin panel to manage plans and recipes
 
+## 📋 How to Use
+
+👨‍🍳 For Users
+
+- Sign up or log in using your email and password
+- Browse available food plans:
+  - Cakes
+  - Vegan
+  - Traditional
+  - And more!
+- Click on any plan to view its full details
+- Click Buy Now to initiate payment via Razorpay
+- After successful payment:
+  - Access the purchased plans in the My Plans section
+  - View recipes, and other related resources
+
+🛠️ For Admins
+
+- Log in using valid admin credentials
+- Navigate to the Admin Panel from the dashboard
+- Purchase a subscription plan to unlock admin features (Mandatory)
+- Manage food plans:
+  - Add new plans
+  - Update or delete existing plans
+- Assign recipes and ingredients to each plan
+- Upload additional resources such as:
+  - Cooking videos
+  - Step-by-step instructions
+-Check order and payment history
 
 ## 🗂️ Database Diagram
 
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/b07b0be0-bac6-49ca-aef4-ad8ff5de0737" />
 
----
 
 ## 🖼️ Screenshots / Output
 
