@@ -2,6 +2,7 @@
 
 **Foodie India** is your ultimate destination to explore, learn, and master the art of cooking. Whether you're a home chef or a culinary expert, our platform connects you to online classes, curated recipes, and expert cooking content — all in one place.
 
+---
 
 ## 🚀 Features
 
