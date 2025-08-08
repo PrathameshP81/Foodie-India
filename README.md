@@ -49,7 +49,7 @@
 
 ## 🗂️ Database Diagram
 
-<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/b07b0be0-bac6-49ca-aef4-ad8ff5de0737" />
+<img width="1000" height="900" alt="image" src="https://github.com/user-attachments/assets/b07b0be0-bac6-49ca-aef4-ad8ff5de0737" />
 
 
 ---
